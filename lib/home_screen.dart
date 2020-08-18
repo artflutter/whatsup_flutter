@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final list = <String, List<WhatsUp>>{
+    final list = <String, dynamic>{
       'July 2020': julyIssues,
       'June 2020': juneIssues,
     };
@@ -43,23 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: FlutterLogo(
-            colors: MaterialColor(
-              0xFFFFFFFF,
-              <int, Color>{
-                50: Color(0xFFFFFFFF),
-                100: Color(0xFFFFFFFF),
-                200: Color(0xFFFFFFFF),
-                300: Color(0xFFFFFFFF),
-                400: Color(0xFFFFFFFF),
-                500: Color(0xFFFFFFFF),
-                600: Color(0xFFFFFFFF),
-                700: Color(0xFFFFFFFF),
-                800: Color(0xFFFFFFFF),
-                900: Color(0xFFFFFFFF),
-              },
-            ),
-          ),
+          child: FlutterLogo(),
         ),
         title: Text('What\'s up Flutter?'),
       ),

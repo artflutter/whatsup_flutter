@@ -16,7 +16,19 @@ class WhatsUpFlutter extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      builder: ExtendedNavigator<Router>(key: route, router: Router()),
+      darkTheme: ThemeData(
+        primarySwatch: Colors.lightBlue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      highContrastDarkTheme: ThemeData(
+        primarySwatch: Colors.lightGreen,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      highContrastTheme: ThemeData(
+        primarySwatch: Colors.purple,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      builder: ExtendedNavigator<AppRouter>(key: route, router: AppRouter()),
     );
   }
 }

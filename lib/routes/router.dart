@@ -1,5 +1,10 @@
 import 'package:auto_route/auto_route_annotations.dart';
 import 'package:whatsup_flutter/home_screen.dart';
+import 'package:whatsup_flutter/issues/july2020/pr61714_cursor_height.dart';
+import 'package:whatsup_flutter/issues/july2020/pr61778_updated_icons.dart';
+import 'package:whatsup_flutter/issues/july2020/pr62072_selectable_text_select_all.dart';
+import 'package:whatsup_flutter/issues/july2020/pr62337_high_contrast_theming.dart';
+import 'package:whatsup_flutter/issues/july2020/pr62350_overflow_bar.dart';
 import 'package:whatsup_flutter/issues/june2020/pr54128_material_scrollbar_is_always_shown.dart';
 import 'package:whatsup_flutter/issues/june2020/pr56409_interactive_viewer.dart';
 import 'package:whatsup_flutter/issues/june2020/pr57644_tab_bar_physics.dart';
@@ -29,6 +34,12 @@ import 'package:whatsup_flutter/issues_list.dart';
   //////////////
   /// July 2020
   //////////////
+  MaterialRoute<void>(page: Pr62350OverflowBar),
+  MaterialRoute<void>(page: Pr62072SelectableTextSelectAll),
+  MaterialRoute<void>(page: Pr62337HighContrastTheming),
+  MaterialRoute<void>(page: Pr61778UpdatedIcons),
+  MaterialRoute<void>(page: Pr61714CursorHeight),
+//  MaterialRoute<void>(page: ),
 
   //////////////
   /// June 2020
@@ -54,4 +65,4 @@ import 'package:whatsup_flutter/issues_list.dart';
   MaterialRoute<void>(page: Pr58037SwitchListTileControlAffinity),
   MaterialRoute<void>(page: Pr57868CheckboxListTileContentPadding),
 ])
-class $Router {}
+class $AppRouter {}

@@ -10,6 +10,11 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../home_screen.dart';
+import '../issues/july2020/pr61714_cursor_height.dart';
+import '../issues/july2020/pr61778_updated_icons.dart';
+import '../issues/july2020/pr62072_selectable_text_select_all.dart';
+import '../issues/july2020/pr62337_high_contrast_theming.dart';
+import '../issues/july2020/pr62350_overflow_bar.dart';
 import '../issues/june2020/pr54128_material_scrollbar_is_always_shown.dart';
 import '../issues/june2020/pr56409_interactive_viewer.dart';
 import '../issues/june2020/pr57644_tab_bar_physics.dart';
@@ -36,6 +41,13 @@ import '../whats_up.dart';
 class Routes {
   static const String homeScreen = '/';
   static const String issuesList = '/issues-list';
+  static const String pr62350OverflowBar = '/pr62350-overflow-bar';
+  static const String pr62072SelectableTextSelectAll =
+      '/pr62072-selectable-text-select-all';
+  static const String pr62337HighContrastTheming =
+      '/pr62337-high-contrast-theming';
+  static const String pr61778UpdatedIcons = '/pr61778-updated-icons';
+  static const String pr61714CursorHeight = '/pr61714-cursor-height';
   static const String pr60129FixInkFeature = '/pr60129-fix-ink-feature';
   static const String pr59405AppBarToolbarHeight =
       '/pr59405-app-bar-toolbar-height';
@@ -73,6 +85,11 @@ class Routes {
   static const all = <String>{
     homeScreen,
     issuesList,
+    pr62350OverflowBar,
+    pr62072SelectableTextSelectAll,
+    pr62337HighContrastTheming,
+    pr61778UpdatedIcons,
+    pr61714CursorHeight,
     pr60129FixInkFeature,
     pr59405AppBarToolbarHeight,
     pr59405StringCharacters,
@@ -96,12 +113,19 @@ class Routes {
   };
 }
 
-class Router extends RouterBase {
+class AppRouter extends RouterBase {
   @override
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
     RouteDef(Routes.homeScreen, page: HomeScreen),
     RouteDef(Routes.issuesList, page: IssuesList),
+    RouteDef(Routes.pr62350OverflowBar, page: Pr62350OverflowBar),
+    RouteDef(Routes.pr62072SelectableTextSelectAll,
+        page: Pr62072SelectableTextSelectAll),
+    RouteDef(Routes.pr62337HighContrastTheming,
+        page: Pr62337HighContrastTheming),
+    RouteDef(Routes.pr61778UpdatedIcons, page: Pr61778UpdatedIcons),
+    RouteDef(Routes.pr61714CursorHeight, page: Pr61714CursorHeight),
     RouteDef(Routes.pr60129FixInkFeature, page: Pr60129FixInkFeature),
     RouteDef(Routes.pr59405AppBarToolbarHeight,
         page: Pr59405AppBarToolbarHeight),
@@ -154,6 +178,36 @@ class Router extends RouterBase {
           issues: args.issues,
           title: args.title,
         ),
+        settings: data,
+      );
+    },
+    Pr62350OverflowBar: (data) {
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr62350OverflowBar(),
+        settings: data,
+      );
+    },
+    Pr62072SelectableTextSelectAll: (data) {
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr62072SelectableTextSelectAll(),
+        settings: data,
+      );
+    },
+    Pr62337HighContrastTheming: (data) {
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr62337HighContrastTheming(),
+        settings: data,
+      );
+    },
+    Pr61778UpdatedIcons: (data) {
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr61778UpdatedIcons(),
+        settings: data,
+      );
+    },
+    Pr61714CursorHeight: (data) {
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr61714CursorHeight(),
         settings: data,
       );
     },
