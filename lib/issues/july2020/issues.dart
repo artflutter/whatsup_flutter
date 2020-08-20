@@ -41,6 +41,11 @@ final List<WhatsUp> julyIssues = [
     pr: '59766',
     route: Routes.pr59766FormFieldAutovalidationMode,
   ),
+  WhatsUp(
+    title: 'Animated align width and height factor',
+    pr: '61136',
+    route: Routes.pr61136AnimatedAlign,
+  ),
 //  WhatsUp(
 //    title: '',
 //    pr: '',

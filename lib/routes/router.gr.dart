@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 
 import '../home_screen.dart';
 import '../issues/july2020/pr59766_form_field_autovalidation_mode.dart';
+import '../issues/july2020/pr61136_animated_align.dart';
 import '../issues/july2020/pr61401_scrollbar_thikness_and_radius.dart';
 import '../issues/july2020/pr61714_cursor_height.dart';
 import '../issues/july2020/pr61778_updated_icons.dart';
@@ -54,6 +55,7 @@ class Routes {
       '/pr61401-scrollbar-thickness-and-radius';
   static const String pr59766FormFieldAutovalidationMode =
       '/pr59766-form-field-autovalidation-mode';
+  static const String pr61136AnimatedAlign = '/pr61136-animated-align';
   static const String pr60129FixInkFeature = '/pr60129-fix-ink-feature';
   static const String pr59405AppBarToolbarHeight =
       '/pr59405-app-bar-toolbar-height';
@@ -98,6 +100,7 @@ class Routes {
     pr61714CursorHeight,
     pr61401ScrollbarThicknessAndRadius,
     pr59766FormFieldAutovalidationMode,
+    pr61136AnimatedAlign,
     pr60129FixInkFeature,
     pr59405AppBarToolbarHeight,
     pr59405StringCharacters,
@@ -138,6 +141,7 @@ class AppRouter extends RouterBase {
         page: Pr61401ScrollbarThicknessAndRadius),
     RouteDef(Routes.pr59766FormFieldAutovalidationMode,
         page: Pr59766FormFieldAutovalidationMode),
+    RouteDef(Routes.pr61136AnimatedAlign, page: Pr61136AnimatedAlign),
     RouteDef(Routes.pr60129FixInkFeature, page: Pr60129FixInkFeature),
     RouteDef(Routes.pr59405AppBarToolbarHeight,
         page: Pr59405AppBarToolbarHeight),
@@ -235,6 +239,15 @@ class AppRouter extends RouterBase {
       );
       return MaterialPageRoute<void>(
         builder: (context) => Pr59766FormFieldAutovalidationMode(key: args.key),
+        settings: data,
+      );
+    },
+    Pr61136AnimatedAlign: (data) {
+      final args = data.getArgs<Pr61136AnimatedAlignArguments>(
+        orElse: () => Pr61136AnimatedAlignArguments(),
+      );
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr61136AnimatedAlign(key: args.key),
         settings: data,
       );
     },
@@ -381,6 +394,12 @@ class IssuesListArguments {
 class Pr59766FormFieldAutovalidationModeArguments {
   final Key key;
   Pr59766FormFieldAutovalidationModeArguments({this.key});
+}
+
+/// Pr61136AnimatedAlign arguments holder class
+class Pr61136AnimatedAlignArguments {
+  final Key key;
+  Pr61136AnimatedAlignArguments({this.key});
 }
 
 /// Pr57868CheckboxListTileContentPadding arguments holder class
