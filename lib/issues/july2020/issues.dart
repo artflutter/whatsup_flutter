@@ -30,6 +30,12 @@ final List<WhatsUp> julyIssues = [
     pr: '61714',
     route: Routes.pr61714CursorHeight,
   ),
+  WhatsUp(
+    title: 'Scrollbar radius and thickness',
+    pr: '61401',
+    issue: '29576',
+    route: Routes.pr61401ScrollbarThicknessAndRadius,
+  ),
 //  WhatsUp(
 //    title: '',
 //    pr: '',

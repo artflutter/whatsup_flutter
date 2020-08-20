@@ -13,9 +13,7 @@ class _Pr62350OverflowBarState extends State<Pr62350OverflowBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Label unnecessarily elided'),
-      ),
+      appBar: AppBar(),
       body: Column(
         children: [
           Description(

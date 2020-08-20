@@ -5,9 +5,7 @@ class Pr61778UpdatedIcons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Updated icons'),
-      ),
+      appBar: AppBar(),
       body: Column(
         children: [
           Description(

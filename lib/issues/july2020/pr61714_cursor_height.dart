@@ -14,9 +14,7 @@ class _Pr61714CursorHeightState extends State<Pr61714CursorHeight> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Label unnecessarily elided'),
-      ),
+      appBar: AppBar(),
       body: Column(
         children: [
           Description(

@@ -7,9 +7,7 @@ class Pr62072SelectableTextSelectAll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Label unnecessarily elided'),
-      ),
+      appBar: AppBar(),
       body: Column(
         children: [
           Description(
