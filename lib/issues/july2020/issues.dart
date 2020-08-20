@@ -46,6 +46,12 @@ final List<WhatsUp> julyIssues = [
     pr: '61136',
     route: Routes.pr61136AnimatedAlign,
   ),
+  WhatsUp(
+    title: 'ListTileTheme tileColor and selectedTileColor',
+    pr: '61532',
+    issue: '61525',
+    route: Routes.pr61532ListTileThemeProps,
+  ),
 //  WhatsUp(
 //    title: '',
 //    pr: '',

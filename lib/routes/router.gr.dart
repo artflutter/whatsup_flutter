@@ -13,6 +13,7 @@ import '../home_screen.dart';
 import '../issues/july2020/pr59766_form_field_autovalidation_mode.dart';
 import '../issues/july2020/pr61136_animated_align.dart';
 import '../issues/july2020/pr61401_scrollbar_thikness_and_radius.dart';
+import '../issues/july2020/pr61532_list_tile_theme_props.dart';
 import '../issues/july2020/pr61714_cursor_height.dart';
 import '../issues/july2020/pr61778_updated_icons.dart';
 import '../issues/july2020/pr62072_selectable_text_select_all.dart';
@@ -56,6 +57,8 @@ class Routes {
   static const String pr59766FormFieldAutovalidationMode =
       '/pr59766-form-field-autovalidation-mode';
   static const String pr61136AnimatedAlign = '/pr61136-animated-align';
+  static const String pr61532ListTileThemeProps =
+      '/pr61532-list-tile-theme-props';
   static const String pr60129FixInkFeature = '/pr60129-fix-ink-feature';
   static const String pr59405AppBarToolbarHeight =
       '/pr59405-app-bar-toolbar-height';
@@ -101,6 +104,7 @@ class Routes {
     pr61401ScrollbarThicknessAndRadius,
     pr59766FormFieldAutovalidationMode,
     pr61136AnimatedAlign,
+    pr61532ListTileThemeProps,
     pr60129FixInkFeature,
     pr59405AppBarToolbarHeight,
     pr59405StringCharacters,
@@ -142,6 +146,7 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.pr59766FormFieldAutovalidationMode,
         page: Pr59766FormFieldAutovalidationMode),
     RouteDef(Routes.pr61136AnimatedAlign, page: Pr61136AnimatedAlign),
+    RouteDef(Routes.pr61532ListTileThemeProps, page: Pr61532ListTileThemeProps),
     RouteDef(Routes.pr60129FixInkFeature, page: Pr60129FixInkFeature),
     RouteDef(Routes.pr59405AppBarToolbarHeight,
         page: Pr59405AppBarToolbarHeight),
@@ -248,6 +253,12 @@ class AppRouter extends RouterBase {
       );
       return MaterialPageRoute<void>(
         builder: (context) => Pr61136AnimatedAlign(key: args.key),
+        settings: data,
+      );
+    },
+    Pr61532ListTileThemeProps: (data) {
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr61532ListTileThemeProps(),
         settings: data,
       );
     },
