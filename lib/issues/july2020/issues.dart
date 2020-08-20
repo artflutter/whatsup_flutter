@@ -36,6 +36,11 @@ final List<WhatsUp> julyIssues = [
     issue: '29576',
     route: Routes.pr61401ScrollbarThicknessAndRadius,
   ),
+  WhatsUp(
+    title: 'Form field autovalidation mode',
+    pr: '59766',
+    route: Routes.pr59766FormFieldAutovalidationMode,
+  ),
 //  WhatsUp(
 //    title: '',
 //    pr: '',

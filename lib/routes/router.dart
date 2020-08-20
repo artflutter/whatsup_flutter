@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route_annotations.dart';
 import 'package:whatsup_flutter/home_screen.dart';
+import 'package:whatsup_flutter/issues/july2020/pr59766_form_field_autovalidation_mode.dart';
 import 'package:whatsup_flutter/issues/july2020/pr61401_scrollbar_thikness_and_radius.dart';
 import 'package:whatsup_flutter/issues/july2020/pr61714_cursor_height.dart';
 import 'package:whatsup_flutter/issues/july2020/pr61778_updated_icons.dart';
@@ -41,6 +42,7 @@ import 'package:whatsup_flutter/issues_list.dart';
   MaterialRoute<void>(page: Pr61778UpdatedIcons),
   MaterialRoute<void>(page: Pr61714CursorHeight),
   MaterialRoute<void>(page: Pr61401ScrollbarThicknessAndRadius),
+  MaterialRoute<void>(page: Pr59766FormFieldAutovalidationMode),
 //  MaterialRoute<void>(page: ),
 
   //////////////

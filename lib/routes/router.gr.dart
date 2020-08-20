@@ -10,6 +10,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../home_screen.dart';
+import '../issues/july2020/pr59766_form_field_autovalidation_mode.dart';
 import '../issues/july2020/pr61401_scrollbar_thikness_and_radius.dart';
 import '../issues/july2020/pr61714_cursor_height.dart';
 import '../issues/july2020/pr61778_updated_icons.dart';
@@ -51,6 +52,8 @@ class Routes {
   static const String pr61714CursorHeight = '/pr61714-cursor-height';
   static const String pr61401ScrollbarThicknessAndRadius =
       '/pr61401-scrollbar-thickness-and-radius';
+  static const String pr59766FormFieldAutovalidationMode =
+      '/pr59766-form-field-autovalidation-mode';
   static const String pr60129FixInkFeature = '/pr60129-fix-ink-feature';
   static const String pr59405AppBarToolbarHeight =
       '/pr59405-app-bar-toolbar-height';
@@ -94,6 +97,7 @@ class Routes {
     pr61778UpdatedIcons,
     pr61714CursorHeight,
     pr61401ScrollbarThicknessAndRadius,
+    pr59766FormFieldAutovalidationMode,
     pr60129FixInkFeature,
     pr59405AppBarToolbarHeight,
     pr59405StringCharacters,
@@ -132,6 +136,8 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.pr61714CursorHeight, page: Pr61714CursorHeight),
     RouteDef(Routes.pr61401ScrollbarThicknessAndRadius,
         page: Pr61401ScrollbarThicknessAndRadius),
+    RouteDef(Routes.pr59766FormFieldAutovalidationMode,
+        page: Pr59766FormFieldAutovalidationMode),
     RouteDef(Routes.pr60129FixInkFeature, page: Pr60129FixInkFeature),
     RouteDef(Routes.pr59405AppBarToolbarHeight,
         page: Pr59405AppBarToolbarHeight),
@@ -220,6 +226,15 @@ class AppRouter extends RouterBase {
     Pr61401ScrollbarThicknessAndRadius: (data) {
       return MaterialPageRoute<void>(
         builder: (context) => Pr61401ScrollbarThicknessAndRadius(),
+        settings: data,
+      );
+    },
+    Pr59766FormFieldAutovalidationMode: (data) {
+      final args = data.getArgs<Pr59766FormFieldAutovalidationModeArguments>(
+        orElse: () => Pr59766FormFieldAutovalidationModeArguments(),
+      );
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr59766FormFieldAutovalidationMode(key: args.key),
         settings: data,
       );
     },
@@ -360,6 +375,12 @@ class IssuesListArguments {
   final List<WhatsUp> issues;
   final String title;
   IssuesListArguments({this.key, this.issues, this.title});
+}
+
+/// Pr59766FormFieldAutovalidationMode arguments holder class
+class Pr59766FormFieldAutovalidationModeArguments {
+  final Key key;
+  Pr59766FormFieldAutovalidationModeArguments({this.key});
 }
 
 /// Pr57868CheckboxListTileContentPadding arguments holder class

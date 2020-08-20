@@ -17,7 +17,6 @@ class _Pr61401ScrollbarThicknessAndRadiusState
 
   @override
   void initState() {
-    // TODO: implement initState
     _scrollController = ScrollController();
     super.initState();
   }
