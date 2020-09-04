@@ -58,6 +58,11 @@ final List<WhatsUp> julyIssues = [
     issue: '60047',
     route: Routes.pr60179IOs14ActivityIndicator,
   ),
+  WhatsUp(
+      title: 'Show showModalBottomSheet route settings',
+      pr: '60640',
+      issue: '60639',
+      route: Routes.pr60640ShowModalBottomSheetRouteSettings),
 //  WhatsUp(
 //    title: '',
 //    pr: '',
