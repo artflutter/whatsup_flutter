@@ -4,6 +4,7 @@ import 'package:whatsup_flutter/issues/july2020/pr59766_form_field_autovalidatio
 import 'package:whatsup_flutter/issues/july2020/pr60179_i_os14_activity_indicator.dart';
 import 'package:whatsup_flutter/issues/july2020/pr60640_show_modal_bottom_sheet_route_settings.dart';
 import 'package:whatsup_flutter/issues/july2020/pr61136_animated_align.dart';
+import 'package:whatsup_flutter/issues/july2020/pr61180_snack_bar_customization.dart';
 import 'package:whatsup_flutter/issues/july2020/pr61401_scrollbar_thikness_and_radius.dart';
 import 'package:whatsup_flutter/issues/july2020/pr61532_list_tile_theme_props.dart';
 import 'package:whatsup_flutter/issues/july2020/pr61714_cursor_height.dart';
@@ -51,6 +52,7 @@ import 'package:whatsup_flutter/issues_list.dart';
   MaterialRoute<void>(page: Pr61532ListTileThemeProps),
   MaterialRoute<void>(page: Pr60179IOs14ActivityIndicator),
   MaterialRoute<void>(page: Pr60640ShowModalBottomSheetRouteSettings),
+  MaterialRoute<void>(page: Pr61180SnackBarCustomization),
 
   //////////////
   /// June 2020

@@ -14,6 +14,7 @@ import '../issues/july2020/pr59766_form_field_autovalidation_mode.dart';
 import '../issues/july2020/pr60179_i_os14_activity_indicator.dart';
 import '../issues/july2020/pr60640_show_modal_bottom_sheet_route_settings.dart';
 import '../issues/july2020/pr61136_animated_align.dart';
+import '../issues/july2020/pr61180_snack_bar_customization.dart';
 import '../issues/july2020/pr61401_scrollbar_thikness_and_radius.dart';
 import '../issues/july2020/pr61532_list_tile_theme_props.dart';
 import '../issues/july2020/pr61714_cursor_height.dart';
@@ -65,6 +66,8 @@ class Routes {
       '/pr60179-ios14-activity-indicator';
   static const String pr60640ShowModalBottomSheetRouteSettings =
       '/pr60640-show-modal-bottom-sheet-route-settings';
+  static const String pr61180SnackBarCustomization =
+      '/pr61180-snack-bar-customization';
   static const String pr60129FixInkFeature = '/pr60129-fix-ink-feature';
   static const String pr59405AppBarToolbarHeight =
       '/pr59405-app-bar-toolbar-height';
@@ -113,6 +116,7 @@ class Routes {
     pr61532ListTileThemeProps,
     pr60179IOs14ActivityIndicator,
     pr60640ShowModalBottomSheetRouteSettings,
+    pr61180SnackBarCustomization,
     pr60129FixInkFeature,
     pr59405AppBarToolbarHeight,
     pr59405StringCharacters,
@@ -159,6 +163,8 @@ class AppRouter extends RouterBase {
         page: Pr60179IOs14ActivityIndicator),
     RouteDef(Routes.pr60640ShowModalBottomSheetRouteSettings,
         page: Pr60640ShowModalBottomSheetRouteSettings),
+    RouteDef(Routes.pr61180SnackBarCustomization,
+        page: Pr61180SnackBarCustomization),
     RouteDef(Routes.pr60129FixInkFeature, page: Pr60129FixInkFeature),
     RouteDef(Routes.pr59405AppBarToolbarHeight,
         page: Pr59405AppBarToolbarHeight),
@@ -286,6 +292,12 @@ class AppRouter extends RouterBase {
     Pr60640ShowModalBottomSheetRouteSettings: (data) {
       return MaterialPageRoute<void>(
         builder: (context) => Pr60640ShowModalBottomSheetRouteSettings(),
+        settings: data,
+      );
+    },
+    Pr61180SnackBarCustomization: (data) {
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr61180SnackBarCustomization(),
         settings: data,
       );
     },
