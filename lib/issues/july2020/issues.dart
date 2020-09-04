@@ -52,6 +52,12 @@ final List<WhatsUp> julyIssues = [
     issue: '61525',
     route: Routes.pr61532ListTileThemeProps,
   ),
+  WhatsUp(
+    title: 'iOs 14 activity indicator',
+    pr: '60179',
+    issue: '60047',
+    route: Routes.pr60179IOs14ActivityIndicator,
+  ),
 //  WhatsUp(
 //    title: '',
 //    pr: '',

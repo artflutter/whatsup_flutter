@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 
 import '../home_screen.dart';
 import '../issues/july2020/pr59766_form_field_autovalidation_mode.dart';
+import '../issues/july2020/pr60179_i_os14_activity_indicator.dart';
 import '../issues/july2020/pr61136_animated_align.dart';
 import '../issues/july2020/pr61401_scrollbar_thikness_and_radius.dart';
 import '../issues/july2020/pr61532_list_tile_theme_props.dart';
@@ -59,6 +60,8 @@ class Routes {
   static const String pr61136AnimatedAlign = '/pr61136-animated-align';
   static const String pr61532ListTileThemeProps =
       '/pr61532-list-tile-theme-props';
+  static const String pr60179IOs14ActivityIndicator =
+      '/pr60179-ios14-activity-indicator';
   static const String pr60129FixInkFeature = '/pr60129-fix-ink-feature';
   static const String pr59405AppBarToolbarHeight =
       '/pr59405-app-bar-toolbar-height';
@@ -105,6 +108,7 @@ class Routes {
     pr59766FormFieldAutovalidationMode,
     pr61136AnimatedAlign,
     pr61532ListTileThemeProps,
+    pr60179IOs14ActivityIndicator,
     pr60129FixInkFeature,
     pr59405AppBarToolbarHeight,
     pr59405StringCharacters,
@@ -147,6 +151,8 @@ class AppRouter extends RouterBase {
         page: Pr59766FormFieldAutovalidationMode),
     RouteDef(Routes.pr61136AnimatedAlign, page: Pr61136AnimatedAlign),
     RouteDef(Routes.pr61532ListTileThemeProps, page: Pr61532ListTileThemeProps),
+    RouteDef(Routes.pr60179IOs14ActivityIndicator,
+        page: Pr60179IOs14ActivityIndicator),
     RouteDef(Routes.pr60129FixInkFeature, page: Pr60129FixInkFeature),
     RouteDef(Routes.pr59405AppBarToolbarHeight,
         page: Pr59405AppBarToolbarHeight),
@@ -259,6 +265,15 @@ class AppRouter extends RouterBase {
     Pr61532ListTileThemeProps: (data) {
       return MaterialPageRoute<void>(
         builder: (context) => Pr61532ListTileThemeProps(),
+        settings: data,
+      );
+    },
+    Pr60179IOs14ActivityIndicator: (data) {
+      final args = data.getArgs<Pr60179IOs14ActivityIndicatorArguments>(
+        orElse: () => Pr60179IOs14ActivityIndicatorArguments(),
+      );
+      return MaterialPageRoute<void>(
+        builder: (context) => Pr60179IOs14ActivityIndicator(key: args.key),
         settings: data,
       );
     },
@@ -411,6 +426,12 @@ class Pr59766FormFieldAutovalidationModeArguments {
 class Pr61136AnimatedAlignArguments {
   final Key key;
   Pr61136AnimatedAlignArguments({this.key});
+}
+
+/// Pr60179IOs14ActivityIndicator arguments holder class
+class Pr60179IOs14ActivityIndicatorArguments {
+  final Key key;
+  Pr60179IOs14ActivityIndicatorArguments({this.key});
 }
 
 /// Pr57868CheckboxListTileContentPadding arguments holder class
